@@ -71,6 +71,13 @@ function init() {
       console.log(answers.title)
       console.log(answers.description)
       console.log(answers.installation)
+      console.log(answers.usage)
+      console.log(answers.credits)
+      console.log(answers.licenses)
+      console.log(answers.badges)
+      console.log(answers.features)
+      console.log(answers.contributors)
+      console.log(answers.test)
       const data = { ...answers }
       console.log(data)
       const output = generateMarkdown(data)
