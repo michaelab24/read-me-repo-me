@@ -13,7 +13,7 @@ const questions = [
   },
   {
     type: 'input',
-    message: 'What is the description of your project?',
+    message: 'What is the description of your project? (*Please add links to your github and project here.*)',
     name: 'description'
   },
   {
@@ -23,7 +23,7 @@ const questions = [
   },
   {
     type: 'input',
-    message: 'What are the usage instructions for your project?',
+    message: 'What are the usage instructions for your project? (*Please add a screenshot of your project here using ![alt text](assets/images/screenshot.png)',
     name: 'usage'
   },
   {

@@ -1,8 +1,8 @@
-# whats this do
+# butts
 
 ## Description 
 
-whats this do
+its cool and it does stuff
 
 ## Table of Contents
 * [Installation](#installation)
@@ -16,27 +16,27 @@ whats this do
 
 ## Installation
 
-whats this do
+jump 1 time 
 
 ## Usage 
 
-whats this do
+right hop this time
 
 ## Credits
 
-whats this do
+fuvk em
 
 ## License
 
-whats this do
+nah
 
 ## Badges
 
-whats this do
+what>
 
 ## Features
 
-whats this do
+ok
 
 ## Contributors
 
@@ -44,4 +44,4 @@ Yes
 
 ## Test
 
-whats this do
+lol

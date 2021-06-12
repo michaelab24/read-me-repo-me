@@ -62,8 +62,4 @@ ${data.test}
 `;
 }
 
-//function generateMarkdown(response) {
-//  return ` ${}
-//}
-
 module.exports = generateMarkdown;
