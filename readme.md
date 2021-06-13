@@ -2,7 +2,7 @@
 
 ## Description 
 
-its cool and it does stuff
+it helps me look at butts, link.com link.com
 
 ## Table of Contents
 * [Installation](#installation)
@@ -16,32 +16,32 @@ its cool and it does stuff
 
 ## Installation
 
-jump 1 time 
+yeh
 
 ## Usage 
 
-right hop this time
+do a backflip
 
 ## Credits
 
-fuvk em
+jeff
 
 ## License
 
-nah
+undefined
 
 ## Badges
 
-what>
+undefined
 
 ## Features
 
-ok
+do a backflip
 
 ## Contributors
 
-Yes
+undefined
 
 ## Test
 
-lol
+baba
