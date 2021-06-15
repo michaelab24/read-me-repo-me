@@ -44,6 +44,7 @@ const questions = [
     type: 'input',
     message: 'Please add any collaborators.',
     name: 'credits',
+    default: '',
     when: ({ confirmCollab }) => {
       if (confirmCollab) {
         return true;
@@ -59,29 +60,12 @@ const questions = [
     default: true
   },
   {
-    type: 'input',
-    message: 'Please add any licenses here.',
+    type: 'list',
+    message: 'Please select your license type',
+    choices: ['MIT', 'GNU GPLv3', 'Community'],
     name: 'licenses',
     when: ({ licensesConfirm }) => {
       if (licensesConfirm) {
-        return true;
-      } else {
-        return false;
-      }
-    }
-  },
-  {
-    type: 'confirm',
-    name: 'badgeConfirm',
-    message: 'Are there any badges you would like to add?',
-    default: true
-  },
-  {
-    type: 'input',
-    message: 'Please add any badges you may have.',
-    name: 'badges',
-    when: ({ badgeConfirm }) => {
-      if (badgeConfirm) {
         return true;
       } else {
         return false;
@@ -115,7 +99,7 @@ const questions = [
   {
   type: 'input',
   message: 'Please write how you would like other developers to contribute.',
-  name: 'features',
+  name: 'contribute',
   when: ({ contributeConfirm }) => {
     if (contributeConfirm) {
       return true;
@@ -126,12 +110,12 @@ const questions = [
   },
   {
     type: 'input',
-    message: 'Please provide a test for your project if any.',
+    message: 'Please provide a test for your project if any. If none leave blank.',
     name: 'test'
   },
   {
     type: 'input',
-    message: 'If you would like to open your project to any questions, please provide any contact info here.',
+    message: 'If you would like to open your project to any questions, please provide any contact info here. If none leave blank.',
     name: 'questions'
   }
 ];
@@ -153,10 +137,19 @@ function init() {
       console.log(answers.licenses)
       console.log(answers.badges)
       console.log(answers.features)
-      console.log(answers.contributors)
+      console.log(answers.contribute)
       console.log(answers.test)
       console.log(answers.questions)
-      const data = { ...answers }
+      let data = { ...answers }
+      if (!answers.confirmCollab) {
+        data = {...data, credits: 'None'}
+      }
+      if (!answers.featureConfirm) {
+        data = {...data, features: 'No extra features'}
+      }
+      if (!answers.contributeConfirm) {
+        data = {...data, contribute: 'None'}
+      }
       console.log(data)
       const output = generateMarkdown(data)
       console.log(output)
