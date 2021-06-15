@@ -15,7 +15,7 @@ const questions = [
         return true;
       } else {
         console.log('Please enter the title of your project!');
-        return false;
+        return fales;
       }
     }
   },
@@ -126,8 +126,13 @@ const questions = [
   },
   {
     type: 'input',
-    message: 'Please provide a test for your project if any',
+    message: 'Please provide a test for your project if any.',
     name: 'test'
+  },
+  {
+    type: 'input',
+    message: 'If you would like to open your project to any questions, please provide any contact info here.',
+    name: 'questions'
   }
 ];
 
@@ -150,6 +155,7 @@ function init() {
       console.log(answers.features)
       console.log(answers.contributors)
       console.log(answers.test)
+      console.log(answers.questions)
       const data = { ...answers }
       console.log(data)
       const output = generateMarkdown(data)
