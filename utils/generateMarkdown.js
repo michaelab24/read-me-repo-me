@@ -5,9 +5,9 @@ function renderLicenseBadge(license) {
     return ''
   }
   else {
-    return `![${license}](https://img.shields.io/badge/license-${license.replace(' ','_')}-green)`
+    return `![${license}](https://img.shields.io/badge/license-${license.replace(' ', '_')}-green)`
   }
- }
+}
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
@@ -39,9 +39,9 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.`
 
-} else if (license === 'Community') {
-  return `Community license to be defined`
-}
+  } else if (license === 'Community') {
+    return `Community license to be defined`
+  }
   else if (license === 'GNU GPLv3') {
     return `GNU GENERAL PUBLIC LICENSE
     Version 3, 29 June 2007
@@ -701,7 +701,9 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.`
 function generateMarkdown(data) {
   const licenseSection = renderLicenseSection(data.licenses)
   const licenseBadge = renderLicenseBadge(data.licenses)
+  //Headers and data collection
   return `# ${data.title}
+
 
 ## Description 
 

@@ -16,6 +16,8 @@ const questions = [
       } else {
         console.log('Please enter the title of your project!');
         return fales;
+        //questions array     
+
       }
     }
   },
@@ -97,16 +99,16 @@ const questions = [
     default: true
   },
   {
-  type: 'input',
-  message: 'Please write how you would like other developers to contribute.',
-  name: 'contribute',
-  when: ({ contributeConfirm }) => {
-    if (contributeConfirm) {
-      return true;
-    } else {
-      return false;
+    type: 'input',
+    message: 'Please write how you would like other developers to contribute.',
+    name: 'contribute',
+    when: ({ contributeConfirm }) => {
+      if (contributeConfirm) {
+        return true;
+      } else {
+        return false;
+      }
     }
-   }
   },
   {
     type: 'input',
@@ -142,13 +144,13 @@ function init() {
       console.log(answers.questions)
       let data = { ...answers }
       if (!answers.confirmCollab) {
-        data = {...data, credits: 'None'}
+        data = { ...data, credits: 'None' }
       }
       if (!answers.featureConfirm) {
-        data = {...data, features: 'No extra features'}
+        data = { ...data, features: 'No extra features' }
       }
       if (!answers.contributeConfirm) {
-        data = {...data, contribute: 'None'}
+        data = { ...data, contribute: 'None' }
       }
       console.log(data)
       const output = generateMarkdown(data)
